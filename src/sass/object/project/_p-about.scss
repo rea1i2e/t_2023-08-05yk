@@ -1,0 +1,71 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.p-about {
+
+}
+
+.p-about__inner.l-inner {
+
+}
+
+.p-about__container {
+	background-color: skyblue;
+}
+
+.p-about__content {
+	position: sticky;
+	top: 0;
+	display: flex;
+	gap: rem(40);
+	background-color: pink;
+}
+
+.p-about__images {
+	flex-shrink: 0;
+	width: 50%;
+}
+
+.p-about__image {
+	position: absolute;
+	top: 0;
+	// left: 0;
+	width: 50%;
+	height: auto;
+	opacity: 0;
+	// display: none;
+}
+
+.p-about__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	
+}
+
+.p-about__body {
+	flex: 1;
+}
+
+.p-about__heading {
+
+}
+
+.p-about__description {
+
+}
+
+.p-about__button {
+
+}
+
+.c-button {
+
+}
+
+/* is-current画像を表示 */
+.p-about__image.is-current {
+	opacity: 1;
+	display: block;
+}

@@ -1,0 +1,7 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.p-section {
+  background-color: #ccc;
+  font-size: rem(50);
+}

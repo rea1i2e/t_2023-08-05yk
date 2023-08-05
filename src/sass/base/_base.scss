@@ -1,0 +1,53 @@
+/* リキッドレイアウト対応 */
+@use "global" as *;
+
+html {
+  //~375px
+  @media (max-width: 375px) {
+    font-size: vw(375, 16);
+  }
+
+  //375px~787px
+  font-size: 16px;
+
+  // 768px~$inner-pc
+  // デザインカンプのデザインが維持される最大幅
+  @include mq("md") {
+    font-size: vw(($inner-pc + $padding-pc * 2), 16);
+  }
+
+  //inner~max-screen
+  @media (min-width: #{$inner-pc + $padding-pc * 2}px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $base-font-family;
+  color : $black;
+}
+
+main {
+  flex: 1;
+}
+
+/* pcの電話番号発信対応 */
+a[href^="tel:"] {
+  @include mq("md") {
+    pointer-events: none;
+  }
+}
+
+/* ホバー */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+  @include mq("md") {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
